@@ -1,32 +1,37 @@
 import React from 'react'
 import './Dashboard.css';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 const Dashboard = () => {
     const renderCourselImage = () => {
         return (
             <div className='row text-center mb-3 border-0'>
                 <div className='col-4'>
                     <div className='position-relative'>
-                        <img className='rounded-3' style={{height:'100%'}} src="https://us.123rf.com/450wm/farang/farang1104/farang110400069/9412296-view-of-a-rocky-seacoast-long-exposure-vertical-shot.jpg" alt="" />
+                        <img className='rounded-3' style={{ height: '100%' }} src="https://us.123rf.com/450wm/farang/farang1104/farang110400069/9412296-view-of-a-rocky-seacoast-long-exposure-vertical-shot.jpg" alt="" />
                         <p className='position-absolute text-white' style={{ top: "15px", left: "15px" }}>image</p>
                     </div>
                 </div>
                 <div className='col-4'>
                     <div className='col-6'>
-                        <div className='position-relative'>
-                            <img className='rounded-3' style={{width:350, height:300}} src="https://as1.ftcdn.net/v2/jpg/01/45/81/76/1000_F_145817607_vq9DyXGTF4VQV4cxUREX9ZraB3pIHFm2.jpg" alt="" />
-                            <p className='position-absolute text-white' style={{ top: "15px", left: "15px" }}>image</p>
+                        <div className="card text-bg-secondary mb-3" style={{ width: '170%'}}>
+                            <div className="card-header">Header</div>
+                            <div className="card-body">
+                                <h5 className="card-title">Secondary card title</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
                         </div>
                     </div>
                     <div className='col-6'>
                         <div className='position-relative'>
-                            <img className='rounded-3' style={{width:350, height:300}} src="https://as1.ftcdn.net/v2/jpg/01/45/81/76/1000_F_145817607_vq9DyXGTF4VQV4cxUREX9ZraB3pIHFm2.jpg" alt="" />
+                            <img className='rounded-3' style={{ width: 350, height: 300 }} src="https://as1.ftcdn.net/v2/jpg/01/45/81/76/1000_F_145817607_vq9DyXGTF4VQV4cxUREX9ZraB3pIHFm2.jpg" alt="" />
                             <p className='position-absolute text-white' style={{ top: "15px", left: "15px" }}>image</p>
                         </div>
                     </div>
                 </div>
                 <div className='col-4'>
                     <div className='position-relative'>
-                        <img className='rounded-3' style={{height:'100%'}} src="https://st4.depositphotos.com/27201292/38790/i/450/depositphotos_387903584-stock-photo-beautiful-shot-colorful-sunset-sky.jpg" alt="" />
+                        <img className='rounded-3' style={{ height: '100%' }} src="https://st4.depositphotos.com/27201292/38790/i/450/depositphotos_387903584-stock-photo-beautiful-shot-colorful-sunset-sky.jpg" alt="" />
                         <p className='position-absolute text-white' style={{ top: "15px", left: "15px" }}>image</p>
                     </div>
                 </div>
@@ -37,7 +42,7 @@ const Dashboard = () => {
         return (
             <div>
                 <h1 className='text-center mb-5'>Explore homes on Trulia</h1>
-                <p  className='text-center mb-5'>Take a deep dive and browse homes for sale, original neighborhood photos, resident reviews and local insights to find what is right for you.</p>
+                <p className='text-center mb-5'>Take a deep dive and browse homes for sale, original neighborhood photos, resident reviews and local insights to find what is right for you.</p>
                 <div id="carouselExample" className="carousel slide">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
@@ -114,8 +119,10 @@ const Dashboard = () => {
     }
     return (
         <div>
+            <Header />
             {renderHomesImages()}
             {renderCards()}
+            <Footer />
         </div>
     )
 }
